@@ -1,0 +1,45 @@
+# Core (版本与构建向量库的本地环境严格一致，避免 chromadb 0.x/1.x 格式不兼容)
+langchain==1.2.15
+langchain-core==1.5.3
+langchain-community==0.4.1
+langchain-text-splitters==1.1.1
+langchain-chroma==1.1.0
+langchain-openai==1.1.12
+
+# OpenAI兼容 SDK (LLM用，可接智谱/DeepSeek/OpenAI等)
+openai==2.38.0
+
+# 本地 Embedding (HuggingFace, 免费无需 API Key)
+langchain-huggingface==1.2.2
+sentence-transformers==5.4.1
+transformers==4.51.1
+
+# 向量数据库 (必须 1.x，与已提交的向量库格式匹配，切勿降到 0.x)
+chromadb==1.5.8
+
+# Document Loaders
+pypdf>=3.0.0
+python-docx>=0.8.11
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+requests>=2.31.0
+curl_cffi>=0.16.0  # 百度百科抓取：Chrome TLS 指纹绕过 WAF 403（可选，缺省时退回 requests）
+
+# Web UI
+# 钉死 1.63.0（2026-09-03 修复，勿降回 1.32.0）：
+# 1.32.0 硬性要求 numpy<2，与钉死的 langchain-community==0.4.1（要求 numpy>=2.1.0）
+# 直接冲突，且 numpy 1.x 无 Python 3.14 wheel（Cloud 现为 3.14.7），安装必失败
+# （报「installer returned a non-zero exit code」）。1.63.0 是此前 Cloud 可用的
+# 实际解析版本：numpy<3>=1.23、requires_python>=3.10（兼容 3.14），与 langchain-community
+# 可共存（numpy 2.5.x 同时满足两边）。注意：1.63 按钮 HTML 与 1.32 有差异，本地
+# playwright 的按钮居中验证需按 1.63 复验（见 README「部署说明」）。
+streamlit==1.63.0
+
+# PDF导出
+reportlab>=4.0.0
+
+# Utils
+python-dotenv>=1.0.0
+pydantic>=2.0.0
+pydantic-settings>=2.10.1
+pyyaml>=6.0
