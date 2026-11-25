@@ -6,6 +6,8 @@
 
 **🌐 在线体验：<https://history-3x59jfwjin1.qoder.zone/>**
 
+> 本项目是在 **[dreamlee0/history-rag-chat](https://github.com/dreamlee0/history-rag-chat)** 基础上的**二创**——花名册扩容、史料双轨、检索与决策门、在线版界面均在其之上迭代而来。两个仓库同出 **dreamlee0** 之手，内容皆为原创，授权同为 MIT。
+
 ![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)
 ![LangChain](https://img.shields.io/badge/LangChain-1.2-green.svg)
 ![Streamlit](https://img.shields.io/badge/Streamlit-Web-blueviolet.svg)
@@ -59,23 +61,6 @@
 
 <div align="center">
   <img src="images/在线版/对话开场.png" alt="对话开场" width="900"/>
-</div>
-
-### 🖥️ 本地 Streamlit 版
-
-<div align="center">
-  <img src="images/开始.png" alt="开始界面" width="800"/><br/>
-  <sub>开始页 · 水墨底色，一句引入后进入对话</sub>
-</div>
-
-<div align="center">
-  <img src="images/chat界面.png" alt="人物选择界面" width="800"/><br/>
-  <sub>人物选择 · 按朝代折叠分组，一人一卡</sub>
-</div>
-
-<div align="center">
-  <img src="images/对话展示.png" alt="对话展示界面" width="800"/>
-  <img src="images/人物选择.png" alt="聊天界面" width="800"/>
 </div>
 
 ---
@@ -325,6 +310,8 @@ HiStory/
 
 ---
 
-## 📄 License
+## 📄 License 与出处
 
 MIT © Dreamlee0
+
+本项目是在 **[dreamlee0/history-rag-chat](https://github.com/dreamlee0/history-rag-chat)** 基础上的二创版本，两个仓库均为 dreamlee0 原创、同以 MIT 授权。史料与数据源出处见 [DATA_SOURCES.md](DATA_SOURCES.md)。
